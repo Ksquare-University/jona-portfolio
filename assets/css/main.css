@@ -5,6 +5,20 @@
 	templated.co @templatedco
 	Released for free under the Creative Commons Attribution 3.0 license (templated.co/license)
 */
+#chart_wrap {
+    position: relative;
+    padding-bottom: 100%;
+    height: 0;
+    overflow:hidden;
+}
+
+#piechart {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width:100%;
+    height:500px;
+}
 /* Basic */
 @-ms-viewport {
   width: device-width; }
@@ -30,7 +44,7 @@ body {
     -moz-transition: none !important;
     -webkit-transition: none !important;
     -ms-transition: none !important;
-    transition: none !important; }
+    transition: none !important; }												
 
 html, body, div, span, applet, object,
 iframe, h1, h2, h3, h4, h5, h6, p, blockquote,
@@ -1798,7 +1812,7 @@ ul.icons {
   -ms-flex-align: center;
   -ms-flex-pack: center;
   background-color: #111111;
-  color: rgba(0, 0, 0, 0.5);
+  color: rgba(255, 255, 255, 0.5);
   -moz-align-items: center;
   -webkit-align-items: center;
   -ms-align-items: center;
