@@ -12,6 +12,47 @@
 		<meta name="description" content="" />
 		<meta name="keywords" content="" />
 		<link rel="stylesheet" href="assets/css/main.css" />
+		 <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+      google.charts.load('current', {'packages':['bar']});
+      google.charts.setOnLoadCallback(drawStuff);
+
+      function drawStuff() {
+        var data = new google.visualization.arrayToDataTable([
+          ['Disciplines', 'Proficency', {role: 'style'},],
+          ['3D Printing', 60, '#b87333'],
+          ['3D Mechanical modelling', 80, 'color: silver;'],
+          ['Microcontrollers', 80, 'color: silver;'],
+          ['Control systems', 60, 'color: silver;'],
+		  ['Analog electronics', 85, 'color: silver;'],
+		  ['Digital electronics', 80, 'color: silver;'],
+		  ['Arduino C++', 75, 'color: silver;'],
+		  ['Google Cloud platform', 10, 'color: silver;'],
+		  ['Python 3', 50, 'color: silver;'],
+		  ['CSS3', 30, 'color: silver;'],
+		  ['HTML', 30, 'color: silver;']
+          ]);
+
+        var options = {
+          title: 'Disciplines and technology',
+          width: '100%',
+		  height: '500px',
+          legend: { position: 'none' },
+          chart: { title: 'Disciplines and technology',
+                   subtitle: 'proficency by percentage' },
+          bars: 'horizontal', // Required for Material Bar Charts.
+          axes: {
+            x: {
+              0: { side: 'top', label: 'Percentage'} // Top x-axis.
+            }
+          },
+          bar: { groupWidth: "90%" }
+        };
+
+        var chart = new google.charts.Bar(document.getElementById('top_x_div'));
+        chart.draw(data, options);
+      };
+    </script>
 	</head>
 	<body class="is-preload">
 
@@ -26,9 +67,12 @@
 		<!-- Nav -->
 			<nav id="menu">
 				<ul class="links">
-					<li><a href="index.html">Home</a></li>
+					<li><a href="index.html">Home</li>
 					<li><a href="elements.html">Elements</a></li>
-					<li><a href="generic.html">Generic</a></li>
+					<li><a href="generic.html">Hobbies</a></li>
+					<li><a href="certificates.html">Certificates</a></li>
+					<li><a href="proficency.html">Proficiency<strong> ◄</strong></a> </li>
+					
 				</ul>
 			</nav>
 
@@ -50,11 +94,25 @@
 						<h3>Magna odio tempus commodo</h3>
 						<p>In arcu accumsan arcu adipiscing accumsan orci ac. Felis id enim aliquet. Accumsan ac integer lobortis commodo ornare aliquet accumsan erat tempus amet porttitor. Ante commodo blandit adipiscing integer semper orci eget. Faucibus commodo adipiscing mi eu nullam accumsan morbi arcu ornare odio mi adipiscing nascetur lacus ac interdum morbi accumsan vis mi accumsan ac praesent.</p>
 						<p>Felis sagittis eget tempus primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent tincidunt felis sagittis eget. tempus euismod. Magna sed etiam ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus lorem ipsum dolor sit amet nullam.</p>
+						<hr />
+						
 					</div>
 				</div>
 			</section>
+			<section id="main" class="wrapper">
+				<div class="inner">
+					<div class="content">
+						<!--<div id="graph_wrap">-->
+								<div id="top_x_div"></div>
+						<!--</div>-->
+					</div>
+				</div>
+			</section>
+			
+			
+			
 
-		<!-- Footer -->
+		<!-- Footer 
 			<footer id="footer">
 				<div class="inner">
 					<div class="content">
@@ -86,7 +144,7 @@
 					</div>
 				</div>
 			</footer>
-
+		-->
 		<!-- Scripts -->
 			<script src="assets/js/jquery.min.js"></script>
 			<script src="assets/js/browser.min.js"></script>
