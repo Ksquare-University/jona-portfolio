@@ -1,0 +1,102 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+      <title>Proficiency</title>
+	  <meta charset="utf-8" />
+	  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+	  <meta name="description" content="" />
+	  <meta name="keywords" content="" />
+	  <link rel="stylesheet" href="assets/css/main.css" />
+      <script type = "text/javascript" src = "https://www.gstatic.com/charts/loader.js">
+      </script>
+      <script type = "text/javascript"> google.charts.load('current', {packages: ['corechart']});     
+      </script>
+   </head>
+   <body class="is-preload">
+			<!-- Header -->
+			<header id="header">
+				<a class="logo" href="proficiency.html">Return to top</a>
+				<nav>
+					<a href="#menu">Navigation</a>
+				</nav>
+			</header>
+			<nav id="menu">
+				<ul class="links">
+					<li><a href="index.html">Home</li>
+					<li><a href="elements.html">Elements</a></li>
+					<li><a href="generic.html">Hobbies</a></li>
+					<li><a href="certificates.html">Certificates</a></li>
+					<li><a href="proficiency.html">Proficiency<strong> ◄</strong></a></li>
+				</ul>
+			</nav>
+			<div id="heading" >
+				<h1>Proficiency</h1>
+			</div>
+	</body>
+	
+	<div>
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes" />
+      <script language = "JavaScript">
+         function drawChart() {
+            // Define the chart to be drawn.
+            var data = google.visualization.arrayToDataTable([
+               ['Discipline', 'Dexterity', {role:"style"}],
+			   ['3D Printing', 60, '#f1c40f'],
+			   ['3D Mechanical modelling', 80, '#2ecc71'],
+               ['Microcontrollers', 80, '#2ecc71'],
+               ['Control systems', 60, "#f1c40f"],
+               ['Analog electronics', 85, "#2ecc71"],
+               ['Digital electronics', 80, "2ecc71"],
+               ['Arduino C++', 75, "#f1c40f"],
+			   ['Google Cloud platform', 10, "#c0392b"],
+			   ['Python 3', 50, '#f1c40f'],
+			   ['CSS3', 30, '#c0392b'],
+		       ['HTML', 30, '#c0392b']
+            ]);
+
+            var options = {title: 'Technologies and disciplines'}; 
+
+            // Instantiate and draw the chart.
+            var chart = new google.visualization.BarChart(document.getElementById('container'));
+            chart.draw(data, options);
+         }
+         google.charts.setOnLoadCallback(drawChart);
+      </script>
+	  <script language = "JavaScript">
+         function drawSecondChart() {
+            // Define the chart to be drawn.
+            var data = google.visualization.arrayToDataTable([
+               ['Discipline', 'Dexterity', {role:"style"}],
+			   ['3D Printing', 60, '#f1c40f'],
+			   ['3D Mechanical modelling', 80, '#2ecc71'],
+			   ['Laser engraving and cutting', 60, '#f1c40f'],
+               ['Microcontrollers', 80, '#2ecc71'],
+               ['Control systems', 60, "#f1c40f"],
+               ['Analog electronics', 85, "#2ecc71"],
+               ['Digital electronics', 80, "2ecc71"],
+               ['Arduino C++', 75, "#f1c40f"],
+			   ['Google Cloud platform', 10, "#c0392b"],
+			   ['Python 3', 50, '#f1c40f'],
+			   ['CSS3', 30, '#c0392b'],
+		       ['HTML', 30, '#c0392b']
+            ]);
+
+            var options = {title: 'Technologies and disciplines'}; 
+
+            // Instantiate and draw the chart.
+            var chart = new google.visualization.BarChart(document.getElementById('restrainer'));
+            chart.draw(data, options);
+         }
+         google.charts.setOnLoadCallback(drawSecondChart);
+      </script>
+	</div>
+    <div id = "container" style = "width: auto; height: 720px; margin: 0 auto; border: 1rem outset;" content="user-scalable=yes"></div>
+	<div id = "restrainer" style = "width: auto; height: 720px; margin: 0 auto; border: 1rem outset;" content="user-scalable=yes"></div>
+    <script src="assets/js/jquery.min.js"></script>
+	<script src="assets/js/browser.min.js"></script>
+	<script src="assets/js/breakpoints.min.js"></script>
+	<script src="assets/js/util.js"></script>
+	<script src="assets/js/main.js"></script>
+
+   
+</html>
