@@ -1,12 +1,24 @@
 <!DOCTYPE HTML>
 <html>
     <head>
+		<link rel="icon" href="images/favcon.ico">
+		<script> 
+		var selection = new Audio();
+		selection.src = "images/sel.wav";
+		var clicker = new Audio();
+		clicker.src = "images/Menu.wav";
+		var menuopen = new Audio();
+		menuopen.src = "images/menuopen.wav";
+		var menushow = new Audio();
+		menushow.src = "images/menushow.wav";
+		</script>
       <title>Proficiency</title>
 	  <meta charset="utf-8" />
 	  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 	  <meta name="description" content="" />
 	  <meta name="keywords" content="" />
 	  <link rel="stylesheet" href="assets/css/main.css" />
+	  <link rel="icon" type="images/favcon.ico">
       <script type = "text/javascript" src = "https://www.gstatic.com/charts/loader.js">
       </script>
       <script type = "text/javascript"> google.charts.load('current', {packages: ['corechart']});     
@@ -16,21 +28,21 @@
 			<!-- Header -->
 			<header id="header">
 				<a class="logo" href="proficiency.html">Return to top</a>
-				<nav>
+				<nav onmousedown="menuopen.play(); menushow.play()">
 					<a href="#menu">Navigation</a>
 				</nav>
 			</header>
 			<nav id="menu">
-				<ul class="links">
-					<li><a href="index.html">Home</li>
-					<li><a href="elements.html">Elements</a></li>
-					<li><a href="generic.html">Hobbies</a></li>
-					<li><a href="certificates.html">Certificates</a></li>
-					<li><a href="proficiency.html">Proficiency<strong> ◄</strong></a></li>
+				<ul class="links" onmouseover="selection.play()">
+					<li><a href="index.html" onmousedown="clicker.play()">Home</li>
+					<!--<li><a href="elements.html">Elements</a></li>-->
+					<li><a href="hobbies.html" onmousedown="clicker.play()">Hobbies</a></li>
+					<li><a href="certificates.html" onmousedown="clicker.play()">Certificates</a></li>
+					<li><a href="proficiency.html" onmousedown="clicker.play()">Proficiency<strong> ◄</strong></a></li>
 				</ul>
 			</nav>
 			<div id="heading" >
-				<h1>Proficiency</h1>
+				<h1><img src="images/Skills.png" style="width:5%;height:5%;"></img>Proficiency</h1>
 			</div>
 	</body>
 	
@@ -40,21 +52,20 @@
          function drawChart() {
             // Define the chart to be drawn.
             var data = google.visualization.arrayToDataTable([
-               ['Discipline', 'Dexterity', {role:"style"}],
-			   ['3D Printing', 60, '#f1c40f'],
-			   ['3D Mechanical modelling', 80, '#2ecc71'],
-               ['Microcontrollers', 80, '#2ecc71'],
-               ['Control systems', 60, "#f1c40f"],
-               ['Analog electronics', 85, "#2ecc71"],
-               ['Digital electronics', 80, "2ecc71"],
-               ['Arduino C++', 75, "#f1c40f"],
-			   ['Google Cloud platform', 10, "#c0392b"],
-			   ['Python 3', 50, '#f1c40f'],
-			   ['CSS3', 30, '#c0392b'],
-		       ['HTML', 30, '#c0392b']
+               ['Software', 'Proficiency', {role:"style"}],
+			   ['Matlab', 30, "#c0392b"],
+			   ['Salesforce environment', 20, "#c0392b"],
+               ['PyCharm', 30, "#c0392b"],
+               ['TIA Portal', 35, "#c0392b"],
+               ['Micro-cap', 50, '#f1c40f'],
+               ['DSS Solidworks', 80, '#2ecc71'],
+               ['Proteus 8.0', 80, '#2ecc71'],
+			   ['Arduino IDE', 80, '#2ecc71'],
+			   ['LabVIEW', 65, '#f1c40f'],
+			   ['MS Office', 80, '#2ecc71']
             ]);
 
-            var options = {title: 'Technologies and disciplines'}; 
+            var options = {title: 'Software proficiency'}; 
 
             // Instantiate and draw the chart.
             var chart = new google.visualization.BarChart(document.getElementById('container'));
@@ -78,7 +89,8 @@
 			   ['Google Cloud platform', 10, "#c0392b"],
 			   ['Python 3', 50, '#f1c40f'],
 			   ['CSS3', 30, '#c0392b'],
-		       ['HTML', 30, '#c0392b']
+		       ['HTML', 40, '#c0392b'],
+			   ['Git', 20, '#c0392b']
             ]);
 
             var options = {title: 'Technologies and disciplines'}; 
@@ -90,8 +102,8 @@
          google.charts.setOnLoadCallback(drawSecondChart);
       </script>
 	</div>
-    <div id = "container" style = "width: auto; height: 720px; margin: 0 auto; border: 1rem outset;" content="user-scalable=yes"></div>
-	<div id = "restrainer" style = "width: auto; height: 720px; margin: 0 auto; border: 1rem outset;" content="user-scalable=yes"></div>
+    <div id = "container" style = "width: auto; height: 720px; margin: 0 auto; border: 1rem outset;" content="user-scalable=no"></div>
+	<div id = "restrainer" style = "width: auto; height: 720px; margin: 0 auto; border: 1rem outset;" content="user-scalable=no"></div>
     <script src="assets/js/jquery.min.js"></script>
 	<script src="assets/js/browser.min.js"></script>
 	<script src="assets/js/breakpoints.min.js"></script>

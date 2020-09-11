@@ -1,11 +1,17 @@
 <!DOCTYPE HTML>
-<!--
-	INDEX
-	INDEX
-	INDEX
--->
 <html>
 	<head>
+		<link rel="icon" href="images/favcon.ico">
+		<script> 
+		var selection = new Audio();
+		selection.src = "images/sel.wav";
+		var clicker = new Audio();
+		clicker.src = "images/Menu.wav";
+		var menuopen = new Audio();
+		menuopen.src = "images/menuopen.wav";
+		var menushow = new Audio();
+		menushow.src = "images/menushow.wav";
+		</script>
 		<title>Jonathan Portfolio</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
@@ -18,27 +24,32 @@
 		<!-- Header -->
 			<header id="header">
 				<a class="logo" href="index.html">Return to top</a>
-				<nav>
+				<nav onmousedown="menuopen.play(); menushow.play()">
 					<a href="#menu">Navigation</a>
 				</nav>
 			</header>
 
 		<!-- Nav -->
 			<nav id="menu">
-				<ul class="links">
-					<li><a href="index.html">Home<strong> ◄</strong></li>
-					<li><a href="elements.html">Elements</a></li>
-					<li><a href="generic.html">Hobbies</a></li>
-					<li><a href="certificates.html">Certificates</a></li>
-					<li><a href="proficiency.html">Proficiency</a> </li>
+				<ul class="links" onmouseover="selection.play()">
+					<li><a href="index.html" onmousedown="clicker.play()">Home<strong> ◄</strong></li>
+					<!--<li><a href="elements.html">Elements</a></li>-->
+					<li><a href="hobbies.html" onmousedown="clicker.play()">Hobbies</a></li>
+					<li><a href="certificates.html" onmousedown="clicker.play()">Certificates</a></li>
+					<li><a href="proficiency.html" onmousedown="clicker.play()">Proficiency</a> </li>
 					
 				</ul>
 			</nav>
 
 		<!-- Banner -->
 			<section id="banner">
+			
 				<div class="inner">
+					
 					<h2>Jonathan Alexander Sandoval López</h2>
+					<h4>Mechatronics Engineer</h4>
+					<img src="images/FOX.png" style="width:10%;height:10%;"></img>
+					
 				</div>
 				<video autoplay loop muted playsinline src="images/banner.mp4"></video>
 			</section>
@@ -47,62 +58,62 @@
 			<section class="wrapper">
 				<div class="inner">
 					<header class="special">
-						<h2>Sem turpis amet semper</h2>
-						<p>In arcu accumsan arcu adipiscing accumsan orci ac. Felis id enim aliquet. Accumsan ac integer lobortis commodo ornare aliquet accumsan erat tempus amet porttitor.</p>
+						<h2>Welcome to my portfolio</h2>
+						<p>My name is Jonathan and I am a mechatronics engineer with a well-balanced base of hardware and software engineering knowledge, an enthusiast of the design thinking process, R&D, and prototyping processes involving the resolution of different necessities for a wide variety of problems involving a technologic approach.</p>
 					</header>
 					<div class="highlights">
 						<section>
 							<div class="content">
 								<header>
-									<a href="#" class="icon fa-vcard-o"><span class="label">Icon</span></a>
-									<h3>Feugiat consequat</h3>
+									<a class="icon fa-vcard-o"><span class="label"></span></a>
+									<h3>Competent commitment level</h3>
 								</header>
-								<p>Nunc lacinia ante nunc ac lobortis ipsum. Interdum adipiscing gravida odio porttitor sem non mi integer non faucibus.</p>
+								<p>My commitment knows no boundaries, I will make sure to deliver on time and work without being supervised.</p>
 							</div>
 						</section>
 						<section>
 							<div class="content">
 								<header>
-									<a href="#" class="icon fa-files-o"><span class="label">Icon</span></a>
-									<h3>Ante sem integer</h3>
+									<a class="icon fa-files-o"><span class="label"></span></a>
+									<h3>Hunger for researching further</h3>
 								</header>
-								<p>Nunc lacinia ante nunc ac lobortis ipsum. Interdum adipiscing gravida odio porttitor sem non mi integer non faucibus.</p>
+								<p>I'm not stopping until dominating the basics, and from that point I will expand my knowledge much further in a short period of time.</p>
 							</div>
 						</section>
 						<section>
 							<div class="content">
 								<header>
-									<a href="#" class="icon fa-floppy-o"><span class="label">Icon</span></a>
-									<h3>Ipsum consequat</h3>
+									<a class="icon fa-cogs"><span class="label"></span></a>
+									<h3>Adaptability</h3>
 								</header>
-								<p>Nunc lacinia ante nunc ac lobortis ipsum. Interdum adipiscing gravida odio porttitor sem non mi integer non faucibus.</p>
+								<p>There is always a way I will be able to fit in your projects, I'm not a <i>jack of all trades</i>, I would prefer to be called a <i>jack of any trade.</i></p>
 							</div>
 						</section>
 						<section>
 							<div class="content">
 								<header>
-									<a href="#" class="icon fa-line-chart"><span class="label">Icon</span></a>
-									<h3>Interdum gravida</h3>
+									<a class="icon fa-line-chart"><span class="label"></span></a>
+									<h3>Growth mindset</h3>
 								</header>
-								<p>Nunc lacinia ante nunc ac lobortis ipsum. Interdum adipiscing gravida odio porttitor sem non mi integer non faucibus.</p>
+								<p>My mind never stops thinking on new ideas to improve any task that has been implemented. There is always something else to add!</p>
 							</div>
 						</section>
 						<section>
 							<div class="content">
 								<header>
-									<a href="#" class="icon fa-paper-plane-o"><span class="label">Icon</span></a>
-									<h3>Faucibus consequat</h3>
+									<a class="icon fa-paper-plane-o"><span class="label"></span></a>
+									<h3>Always meet or exceed deliverable expectations</h3>
 								</header>
-								<p>Nunc lacinia ante nunc ac lobortis ipsum. Interdum adipiscing gravida odio porttitor sem non mi integer non faucibus.</p>
+								<p>Not only capable of delivering on time, but also will try to deliver further characteristics out of the scope (if allowed).</p>
 							</div>
 						</section>
 						<section>
 							<div class="content">
 								<header>
-									<a href="#" class="icon fa-qrcode"><span class="label">Icon</span></a>
-									<h3>Accumsan viverra</h3>
+									<a class="icon fa-qrcode"><span class="label"></span></a>
+									<h3>Good teammate</h3>
 								</header>
-								<p>Nunc lacinia ante nunc ac lobortis ipsum. Interdum adipiscing gravida odio porttitor sem non mi integer non faucibus.</p>
+								<p>Projects have a great priority, but my teammates will always sit on top, we will not proceed until everyone stays on the same channel.</p>
 							</div>
 						</section>
 					</div>
@@ -112,12 +123,13 @@
 		<!-- CTA -->
 			<section id="cta" class="wrapper">
 				<div class="inner">
-					<h2>Curabitur ullamcorper ultricies</h2>
-					<p>Nunc lacinia ante nunc ac lobortis. Interdum adipiscing gravida odio porttitor sem non mi integer non faucibus ornare mi ut ante amet placerat aliquet. Volutpat eu sed ante lacinia sapien lorem accumsan varius montes viverra nibh in adipiscing. Lorem ipsum dolor vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing sed feugiat eu faucibus. Integer ac sed amet praesent. Nunc lacinia ante nunc ac gravida.</p>
+					<h2>My way to work</h2>
+					<p><i>"In my experience there is no such thing as luck" - Obi-Wan Kenobi</i></p>
+						<h5>Beyond diligence, experience and motivation, our objectives will only be accomplished if and only if we never stop pushing forward.</h5>
 				</div>
 			</section>
 
-		<!-- Testimonials -->
+		<!-- Testimonials
 			<section class="wrapper">
 				<div class="inner">
 					<header class="special">
@@ -132,7 +144,7 @@
 								</blockquote>
 								<div class="author">
 									<div class="image">
-										<img src="images/apple-icon.png" alt="" /> <!-- Gcloud cert-->
+										<img src="images/apple-icon.png" alt="" />
 									</div>
 									<p class="credit">- <strong>Industrial IoT on Google Cloud Platform </strong> <span> | Coursera</span></p>
 									<div>
@@ -143,9 +155,9 @@
 						</section>
 						<section>
 							<div class="content">
-								<!--<blockquote>
+								<blockquote>
 									<p>Nunc lacinia ante nunc ac lobortis ipsum. Interdum adipiscing gravida odio porttitor sem non mi integer non faucibus.</p>
-								</blockquote> -->
+								</blockquote>
 								<div class="author">
 									<div class="image">
 										<img src="images/pic03.jpg" alt="" />
@@ -183,15 +195,11 @@
 					</div>
 				</div>
 			</section>
-
+			-->
 		<!-- Footer -->
 			<footer id="footer">
-				<div class="inner">
+				<div class="inner" style="padding-right:20px;">
 					<div class="content">
-						<section>
-							<h3>Accumsan montes viverra</h3>
-							<p>Nunc lacinia ante nunc ac lobortis. Interdum adipiscing gravida odio porttitor sem non mi integer non faucibus ornare mi ut ante amet placerat aliquet. Volutpat eu sed ante lacinia sapien lorem accumsan varius montes viverra nibh in adipiscing. Lorem ipsum dolor vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing sed feugiat eu faucibus. Integer ac sed amet praesent. Nunc lacinia ante nunc ac gravida.</p>
-						</section>
 						<!--
 						<section>
 							<h4>Sem turpis amet semper</h4>
@@ -206,8 +214,10 @@
 						<section>
 							<h4>Contact me</h4>
 							<ul class="plain">
-								<li><a href="#"><i class="icon fa-twitter">&nbsp;</i>Linkedin</a></li>
-								<li><a href="#"><i class="icon fa-github">&nbsp;</i>Github</a></li>
+								<li><a href="https://linkedin.com/in/jonathan-sandoval-152558124" target="_blank"><i class="icon fa-linkedin">&nbsp;</i>LinkedIn</a></li>
+								<li><a href="https://github.com/Jonasand96" target="_blank"><i class="icon fa-github">&nbsp;</i>Github</a></li>
+								<li><a href="https://trailblazer.me/id/jonasandoval" target="_blank"><img src="images/sf.ico" style="width:5%;height:5%;"></img>Trailhead Salesforce</a></li>
+								<li><a><i class="icon fa-phone">&nbsp;</i>+52 55 4514-4647</a></li>
 							</ul>
 						</section>
 					</div>

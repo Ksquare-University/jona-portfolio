@@ -2,6 +2,18 @@
 
 <html>
 	<head>
+		<link rel="icon" href="images/favcon.ico">
+		<script> 
+		var selection = new Audio();
+		selection.src = "images/sel.wav";
+		var clicker = new Audio();
+		clicker.src = "images/Menu.wav";
+		var menuopen = new Audio();
+		menuopen.src = "images/menuopen.wav";
+		var menushow = new Audio();
+		menushow.src = "images/menushow.wav";
+		</script>
+		
 		<title>Certificates</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
@@ -14,24 +26,25 @@
 		<!-- Header -->
 			<header id="header">
 				<a class="logo" href="certificates.html">Return to top</a>
-				<nav>
+				<nav onmousedown="menuopen.play(); menushow.play()">
 					<a href="#menu">Navigation</a>
 				</nav>
 			</header>
 
 		<!-- Nav -->
 			<nav id="menu">
-				<ul class="links">
-					<li><a href="index.html">Home</li>
-					<li><a href="elements.html">Elements</a></li>
-					<li><a href="certificates.html">Certificates<strong> ◄</strong></a></li>
-					<li><a href="proficiency.html">Proficiency</a> </li>
+				<ul class="links" onmouseover="selection.play()">
+					<li><a href="index.html" onmousedown="clicker.play()">Home</a></li>
+					<!--<li><a href="elements.html">Elements</a></li>-->
+					<li><a href="hobbies.html" onmousedown="clicker.play()">Hobbies</a></li>
+					<li><a href="certificates.html" onmousedown="clicker.play()">Certificates<strong> ◄</strong></a></li>
+					<li><a href="proficiency.html" onmousedown="clicker.play()">Proficiency</a></li>
 				</ul>
 			</nav>
 
 		<!-- Heading -->
 			<div id="heading" >
-				<h1>Certificates</h1>
+				<h1><img src="images/Searching.png" style="width:5%;height:5%;"></img>Certificates</h1>
 			</div>
 
 		<!-- Main -->
@@ -88,7 +101,7 @@
 								<div class="image">
 								<!--<a href="link" target="_blank">-->
 								<a>
-								<img src="images/solidworksOFF.png" alt="" width="15%" height="15%"><!-- Gcloud cert-->
+								<img src="images/solidworksOFF.png" alt="" width="5%" height="5%"><!-- Gcloud cert-->
 								</a>
 							</div>
 							<p>Solidworks Mechanical Designer certificate</p>
@@ -97,7 +110,7 @@
 								<div class="image">
 								<!--<a href="link" target="_blank">-->
 								<a>
-								<img src="images/niOFF.png" alt="" width="15%" height="15%"><!-- Gcloud cert-->
+								<img src="images/niOFF.png" alt="" width="5%" height="5%"><!-- Gcloud cert-->
 								</a>
 							</div>
 							<p>National Instruments LabVIEW Associate Developer certificate<p>
