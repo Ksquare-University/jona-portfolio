@@ -27,7 +27,8 @@
    <body class="is-preload">
 			<!-- Header -->
 			<header id="header">
-				<a class="logo" href="#">Return to top</a>
+				<a class="logo" href="index.html">Home</a>
+				<a class="logo2" href="#">Return to top</a>
 				<nav onmousedown="menuopen.play(); menushow.play()">
 					<a href="#menu">Navigation</a>
 				</nav>
@@ -60,10 +61,11 @@
                ['TIA Portal', 35, "#c0392b"],
                ['Micro-cap', 50, '#f1c40f'],
                ['DSS Solidworks', 80, '#2ecc71'],
-               ['Proteus 8.0', 80, '#2ecc71'],
+               ['Proteus 8.0', 85, '#2ecc71'],
 			   ['Arduino IDE', 80, '#2ecc71'],
 			   ['LabVIEW', 65, '#f1c40f'],
-			   ['MS Office', 80, '#2ecc71']
+			   ['MS Office', 80, '#2ecc71'],
+			   ['', 100, '#555555']
             ]);
 
             var options = {title: 'Software proficiency'}; 
@@ -89,9 +91,10 @@
                ['Arduino C++', 75, "#f1c40f"],
 			   ['Google Cloud platform', 10, "#c0392b"],
 			   ['Python 3', 50, '#f1c40f'],
-			   ['CSS3', 30, '#c0392b'],
-		       ['HTML', 40, '#c0392b'],
-			   ['Git', 20, '#c0392b']
+			   ['CSS3', 40, '#f1c40f'],
+		       ['HTML', 45, '#f1c40f'],
+			   ['GitHub', 30, '#c0392b'],
+			   ['', 100, '#555555']
             ]);
 
             var options = {title: 'Technologies and disciplines'}; 
@@ -105,7 +108,25 @@
 	</div>
     <div id = "container" style = "width: auto; height: 720px; margin: 0 auto; border: 1rem outset;" content="user-scalable=no"></div>
 	<div id = "restrainer" style = "width: auto; height: 720px; margin: 0 auto; border: 1rem outset;" content="user-scalable=no"></div>
-    <script src="assets/js/jquery.min.js"></script>
+	
+	<footer id="footer">
+		<!--<div class="inner" style="padding-right:20px;">
+		-->
+			<div class="content">
+				<section>
+					<h4>Contact me</h4>
+					<ul class="plain">
+						<li><a href="https://linkedin.com/in/jonathan-sandoval-152558124" target="_blank"><i class="icon fa-linkedin">&nbsp;</i>LinkedIn</a></li>
+						<li><a href="https://github.com/Jonasand96" target="_blank"><i class="icon fa-github">&nbsp;</i>Github</a></li>
+						<li style="padding-left: 10px;"><a href="https://trailblazer.me/id/jonasandoval" target="_blank"><img src="images/sf.ico" style="width:3%;height:3%;"></img>&emsp;&ensp;Trailblazer Salesforce</a></li>
+					</ul>
+				</section>
+			</div>
+		<!--</div>
+		-->
+	</footer>
+	
+	<script src="assets/js/jquery.min.js"></script>
 	<script src="assets/js/browser.min.js"></script>
 	<script src="assets/js/breakpoints.min.js"></script>
 	<script src="assets/js/util.js"></script>
